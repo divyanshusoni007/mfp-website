@@ -100,7 +100,7 @@
 
 /* Hero Section */
 .hero-section {
-  background: url('https://via.placeholder.com/1920x800/121629/ffffff?text=Background+Hero+Image') center/cover no-repeat;
+  background: url('/assets/images/hero-background.webp') center/cover no-repeat;
   min-height: 520px;
   position: relative;
   display: flex;
@@ -366,7 +366,7 @@
 
 /* CTA Banner */
 .cta-banner {
-  background: url('https://via.placeholder.com/1920x400/1b2038/ffffff?text=CTA+Background') center/cover no-repeat;
+  background: url('/assets/images/cta-background.jpg') center/cover no-repeat;
   padding: 60px 20px;
   text-align: center;
   color: #fff;
