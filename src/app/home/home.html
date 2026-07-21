@@ -1,0 +1,169 @@
+<!-- Navigation Header -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="brand-logos">
+      <div class="logo-item"><span class="logo-icon">🏠</span> <strong>MFP</strong> <small>BUILDING</small></div>
+      <div class="logo-item"><span class="logo-icon">⚡</span> <strong>MFP</strong> <small>ELECTRICAL</small></div>
+      <div class="logo-item"><span class="logo-icon">🌱</span> <strong>MFP</strong> <small>RENEWABLES</small></div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#">Who We Are</a>
+      <div class="dropdown">
+        <a href="#">Services ▾</a>
+      </div>
+      <div class="dropdown">
+        <a href="#">Sectors ▾</a>
+      </div>
+      <a href="#">Projects</a>
+      <a href="#">Blog</a>
+    </nav>
+
+    <a href="#" class="btn-primary nav-btn">Contact 08082 817788</a>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <div class="hero-logo-large">
+        <div class="hero-icon">🏠</div>
+        <h1>MFP</h1>
+      </div>
+      <div class="hero-subtitles">
+        <span>BUILDING</span> | <span>ELECTRICAL</span> | <span>RENEWABLES</span>
+      </div>
+      <h2 class="hero-experience">Over 30 years experience</h2>
+      <div class="hero-actions">
+        <button class="btn-primary">Tell me more...</button>
+        <button class="btn-primary btn-gold">Get in touch</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Nutshell Section -->
+<section class="nutshell-section">
+  <div class="container nutshell-container">
+    <div class="nutshell-text">
+      <h2>In a nutshell</h2>
+      <p>
+        MFP Building Services are a family-run business based in Ockbrook Derbyshire, who provide
+        exceptional <a href="#">design and build solutions</a> to both the <a href="#">private sector</a> and 
+        <a href="#">Local Authorities</a>. Working with our carefully chosen network of 
+        <a href="#">trusted architects</a>, we offer high quality, full circle design and build services.
+      </p>
+      <button class="btn-primary">Learn more...</button>
+    </div>
+    <div class="nutshell-image-container">
+      <img src="https://via.placeholder.com/600x400/2a3042/ffffff?text=Construction+Work+Image" alt="Construction Site" class="responsive-img" />
+    </div>
+  </div>
+</section>
+
+<!-- Expertise / Services Section -->
+<section class="expertise-section">
+  <div class="container">
+    <div class="section-title">
+      <p class="subtitle">What we do</p>
+      <h2>Our Expertise</h2>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let service of services">
+        <div class="service-icon">{{ service.icon }}</div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+        <button class="btn-primary card-btn">Learn more...</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<!-- Testimonials Slider Section -->
+<section class="testimonials-section">
+  <div class="container text-center">
+    <p class="subtitle">What people say</p>
+    <h2>Customer reviews</h2>
+    
+    <div class="carousel-container">
+      <!-- Previous Button -->
+      <button class="carousel-btn prev-btn" (click)="prevSlide()" aria-label="Previous Review">❮</button>
+
+      <!-- Active Slide Container -->
+      <div class="carousel-content">
+        <p class="testimonial-quote">"{{ testimonials[currentIndex].quote }}"</p>
+        <p class="testimonial-author">{{ testimonials[currentIndex].author }}</p>
+      </div>
+
+      <!-- Next Button -->
+      <button class="carousel-btn next-btn" (click)="nextSlide()" aria-label="Next Review">❯</button>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="slider-dots">
+      <span 
+        *ngFor="let t of testimonials; let i = index" 
+        class="dot" 
+        [class.active]="i === currentIndex"
+        (click)="goToSlide(i)">
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Banner -->
+<section class="cta-banner">
+  <div class="cta-content">
+    <h2>Heard enough?</h2>
+    <p>Start talking to us – we’re ready when you’re ready</p>
+    <button class="btn-primary btn-gold">Get in touch</button>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <div class="hero-logo-large small">
+        <div class="hero-icon">🏠</div>
+        <h2>MFP</h2>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <p>📞 Office: 08082 817788</p>
+      <p>📞 Electrical: 08082 817789</p>
+      <p>✉️ info&#64;mfpbuildingsolutions.co.uk</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Socials</h4>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Address</h4>
+      <p>📍 31 Moor Street Spondon<br>DE21 7EA</p>
+    </div>
+  </div>
+
+  <div class="container accreditations">
+    <div class="badge-placeholder">CHAS ELITE</div>
+    <div class="badge-placeholder">CHAS Accredited</div>
+    <div class="badge-placeholder">TRUSTMARK</div>
+    <div class="badge-placeholder">NAPIT</div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>Supported By <a href="#">IT Fusion Hub</a></p>
+    <a href="#" class="privacy-link">Privacy Policy</a>
+  </div>
+</footer>
